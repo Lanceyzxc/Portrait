@@ -1,10 +1,12 @@
 body {
     margin: 0;
-    padding: 0;
-    font-family: poppins;
+    padding: 10px;
+    font-family: poppins, sans-serif;
     background: #000;
+    box-sizing: border-box;
 }
-P{
+
+p {
     font-size: 8px;
     line-height: 8px;
     text-align: justify;
@@ -15,4 +17,88 @@ P{
     background-position: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Mobile devices (phones) */
+@media only screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    
+    p {
+        font-size: 6px;
+        line-height: 6px;
+        text-align: left; /* Better readability on small screens */
+    }
+}
+
+/* Small mobile devices */
+@media only screen and (max-width: 320px) {
+    body {
+        padding: 3px;
+    }
+    
+    p {
+        font-size: 5px;
+        line-height: 5px;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    p {
+        font-size: 7px;
+        line-height: 7px;
+    }
+}
+
+/* Larger tablets and small desktops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        padding: 20px;
+    }
+    
+    p {
+        font-size: 9px;
+        line-height: 9px;
+    }
+}
+
+/* Large screens */
+@media only screen and (min-width: 1025px) {
+    body {
+        padding: 30px;
+    }
+    
+    p {
+        font-size: 10px;
+        line-height: 10px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+    p {
+        font-size: 7px;
+        line-height: 7px;
+    }
+}
+
+/* High DPI displays */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi) {
+    p {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }
