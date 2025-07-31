@@ -17,53 +17,27 @@ body {
         -webkit-background-clip: text;
         -webkit-text-fill-color: rgba(255, 255, 255, 0);
     }
-    /* Big Screen styles - show big screen content only (1440px and larger) */
-        @media screen and (min-width: 1440px) {
-            .big-screen-content {
-                display: block;
-            }
-            .desktop-content {
-                display: none;
-            }
-            .mobile-content {
-                display: none;
-            }
-            
-            /* You can add big screen-specific styling here if needed */
-            .big-screen-content p {
-                font-size: 10px;
-                line-height: 10px;
-            }
+    /* Desktop styles - show desktop content, hide mobile content */
+    @media screen and (min-width: 769px) {
+        .desktop-content {
+            display: block;
         }
-
-        /* Desktop styles - show desktop content (769px to 1439px) */
-        @media screen and (min-width: 769px) and (max-width: 1439px) {
-            .desktop-content {
-                display: block;
-            }
-            .mobile-content {
-                display: none;
-            }
-            .big-screen-content {
-                display: none;
-            }
+        .mobile-content {
+            display: none;
         }
-
-        /* Mobile styles - show mobile content (768px and smaller) */
-        @media screen and (max-width: 768px) {
-            .desktop-content {
-                display: none;
-            }
-            .mobile-content {
-                display: block;
-            }
-            .big-screen-content {
-                display: none;
-            }
-            
-            /* You can add mobile-specific styling here if needed */
-            .mobile-content p {
-                font-size: 6px;
-                line-height: 6px;
-            }
-        } 
+    }
+    /* Mobile styles - show mobile content, hide desktop content */
+    @media screen and (max-width: 768px) {
+        .desktop-content {
+            display: none;
+        }
+        .mobile-content {
+            display: block;
+        }
+        
+        /* You can add mobile-specific styling here if needed */
+        .mobile-content p {
+            font-size: 6px;
+            line-height: 6px;
+        }
+    }
